@@ -1,0 +1,15 @@
+<section
+  *ngIf="offer"
+  class="content-container"
+>
+  <h1>{{offer.title}}</h1>
+
+  <img
+    class="photo"
+    src="{{offer.filePath}}"
+  >
+  <section class="offer-content ">
+    <span [innerHtml]="offer.description"></span>
+  </section>
+
+</section>

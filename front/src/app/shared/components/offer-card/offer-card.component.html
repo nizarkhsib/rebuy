@@ -1,0 +1,73 @@
+<mat-card class="mat-elevation-z4">
+
+  <mat-card-content>
+    <div>
+      <h1>{{offer.title}}</h1>
+    </div>
+
+  </mat-card-content>
+
+  <img
+    mat-card-image
+    src="{{offer.filePath}}"
+  >
+
+  <section fxLayout="row wrap">
+
+    <div
+      fxFlex="70"
+      fxLayoutAlign="start"
+    >
+      <mat-icon inline="true">favorite</mat-icon>
+      <span
+        class="likes"
+        fxLayoutAlign="center end"
+      >
+        {{offer.likes}}
+      </span>
+
+    </div>
+
+  </section>
+
+  <mat-card-actions>
+    <section
+      fxLayout="row"
+      fxLayoutGap="10px"
+      fxLayoutAlign="space-around"
+    >
+      <button
+        mat-button
+        *ngIf="!hasLikedTheOffer()"
+        (click)="likeOffer()"
+      >
+        <mat-icon>thumb_up</mat-icon>
+        LIKE
+      </button>
+      <button
+        mat-button
+        *ngIf="!hasdislikedTheOffer()"
+        (click)="dislikeOffer()"
+      >
+        <mat-icon>thumb_down</mat-icon>
+        DISLIKE
+      </button>
+
+      <button mat-button>
+        <mat-icon>add_shopping_cart</mat-icon>
+        BUY
+      </button>
+      <button
+        mat-button
+        (click)="viewDetailsClicked()"
+      >
+        <mat-icon>pageview</mat-icon>
+
+        <a>View details</a>
+      </button>
+
+    </section>
+
+  </mat-card-actions>
+
+</mat-card>

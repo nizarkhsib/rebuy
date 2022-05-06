@@ -1,0 +1,37 @@
+:host {
+
+    .mat-card {
+        max-width: 500px;
+    }
+
+    .mat-card-actions {
+        justify-content: space-around;
+    }
+
+    .mat-button {
+        font-size: 10px !important;
+    }
+
+    .mat-icon.mat-icon-inline {
+        font-size: inherit;
+        height: inherit;
+        line-height: inherit;
+        width: inherit;
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background: red;
+        display: flex;
+        color: white;
+        justify-content: center;
+    }
+}
+
+.likes {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.comments {
+    font-size: 12px;
+}

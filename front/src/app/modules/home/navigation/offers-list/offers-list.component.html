@@ -1,0 +1,29 @@
+<div class="content">
+  <div
+    fxLayout="row wrap"
+    fxLayoutGap="16px grid"
+  >
+    <div
+      [fxFlex]="'100%'"
+      fxFlex.xs="100%"
+      fxLayoutAlign="center center"
+      *ngFor="let offer of offers"
+    >
+      <offer-card
+        (viewDetails)="viewDetails(offer)"
+        [offer]="offer"
+      ></offer-card>
+    </div>
+  </div>
+</div>
+
+<mat-paginator
+  class="paginator"
+  (page)="onPageChange($event)"
+  [length]="count"
+  [pageSize]="4"
+  [pageSizeOptions]="[4]"
+  aria-label="Select page"
+  *ngIf="offers.length > 0"
+>
+</mat-paginator>
